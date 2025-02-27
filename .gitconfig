@@ -3,3 +3,5 @@
 [user]
 	name = Andres Aguilar
 	email = aguilarcarboni@gmail.com
+[alias]
+    repo-clear = rm --cached `git ls-files -i -c --exclude-from=.gitignore`
