@@ -4,4 +4,9 @@
 	name = Andres Aguilar
 	email = aguilarcarboni@gmail.com
 [alias]
-    repo-clear = rm --cached `git ls-files -i -c --exclude-from=.gitignore`
+    repo-clear = !git rm --cached `git ls-files -i -c --exclude-from=.gitignore`
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
