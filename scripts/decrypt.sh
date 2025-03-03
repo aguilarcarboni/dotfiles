@@ -17,7 +17,7 @@ tar xzf encrypted.tar.gz
 # Remove the zip
 rm encrypted.tar.gz
 
-# Remove the encrypted directory
-rm -rf encrypted
+# Remove the encrypted file
+rm encrypted.tar.gz.gpg
 
 echo "Done\n"
