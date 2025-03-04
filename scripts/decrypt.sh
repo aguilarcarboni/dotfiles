@@ -1,11 +1,10 @@
 #!/bin/bash
 
+# This script is used to decrypt the dotfiles in the current directory.
+# Do not use this to install the dotfiles on the user's machine.
+
 set -e
 set -o pipefail
-
-###############################################################################
-# Decrypt Dotfiles                                                            
-###############################################################################
 
 cd ../
 echo "Decrypting heavier files..."

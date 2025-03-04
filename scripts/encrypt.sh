@@ -1,11 +1,10 @@
 #!/bin/bash
 
+# This script is used to encrypt the dotfiles in the current directory.
+# Do not use this to install the dotfiles on the user's machine.
+
 set -e
 set -o pipefail
-
-###############################################################################
-# Encrypt Dotfiles                                                            
-###############################################################################
 
 cd ../
 echo "Encrypting heavier files..."

@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# This script is used to get the dotfiles from Github and install them on the user's machine.
+# WARNING: THIS IS A DESTRUCTIVE SCRIPT. IT WILL OVERWRITE THE USER'S EXISTING DOTFILES.
+
+# TODO: add public support
+
 set -e
 set -o pipefail
 
