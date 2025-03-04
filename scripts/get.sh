@@ -35,9 +35,9 @@ chmod 700 ~/.gnupg
 # SSH
 ###############################################################################
 
-# Copy .ssh/config to home directory
+# Copy .ssh files to home directory
 # This config allows the Apple Keychain to be used for SSH authentication
-cp -r ~/dotfiles/.ssh/config ~/.ssh/config
+cp -r ~/dotfiles/.ssh ~/.ssh
 
 ###############################################################################
 # Git
