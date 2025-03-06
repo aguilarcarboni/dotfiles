@@ -56,8 +56,9 @@ cp ~/dotfiles/.zprofile ~/
 # Copy .bashrc to home directory
 cp ~/dotfiles/.bashrc ~/
 
-# Copy .zshrc to home directory
+# Copy .zshrc and .zprofile to home directory
 cp ~/dotfiles/.zshrc ~/
+cp ~/dotfiles/.zprofile ~/
 
 ###############################################################################
 # Decrypt Dotfiles                                                            
