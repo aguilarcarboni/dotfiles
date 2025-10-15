@@ -13,12 +13,14 @@ create-audiobook() {
   cat files.txt
 
   # Generate single .m4b file with cover and metadata
-  ffmpeg -f concat -safe 0 -i files.txt -i "${cover}" \
-    -map 0:a -map 1:v -c:a aac -b:a 128k -c:v copy \
-    -metadata title="${title}" \
-    -metadata author="${author}" \
+  ffmpeg -f concat -safe 0 -i files.txt -i ${cover} \
+    -map 0:a -map 1:v \
+    -c:a aac -b:a 128k -c:v copy \
+    -metadata title=${title} \
+    -metadata artist=${author} \
     -metadata:s:v comment="Cover (front)" \
-    -disposition:v attached_pic output.m4b
+    -disposition:v attached_pic \
+    output.m4b
 
   # Cleanup
   rm files.txt
