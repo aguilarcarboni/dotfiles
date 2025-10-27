@@ -1,7 +1,8 @@
 # Custom Commands
 alias generate-secret="openssl rand -base64"
 alias python-start='[ ! -d "venv" ] && python3 -m venv venv; source venv/bin/activate && pip install -r requirements.txt'
-alias generate-rsa-key='openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:4096 && openssl enc -aes-256-cbc -salt -in private_key.pem -out private_key.enc && openssl rsa -pubout -in private_key.pem -out public_key.pem'
+alias generate-encoded-rsa-key='openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:4096 && openssl enc -aes-256-cbc -salt -in private_key.pem -out private_key.enc && openssl rsa -pubout -in private_key.pem -out public_key.pem'
+alias decode-rsa-key='openssl enc -d -aes-256-cbc -in private_key.enc -out private_key.pem'
 create-audiobook() {
   # Prompt for metadata (zsh read uses ? prompt syntax)
   read "title?Title of the audiobook: "
